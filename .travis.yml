@@ -1,0 +1,23 @@
+language: node_js
+
+sudo: false
+
+node_js:
+- v8.9.0
+
+install:
+- npm install
+
+before_script:
+- npm test
+
+script:
+- tsc
+
+deploy:
+  provider: npm
+  email: ez@jok.io
+  api_key:
+    secure: BPGsXSNS0EiTk0uw+5yDfO5zlQrVnedXSEfUJ96nkOeawDxF39u71FK+/PGmX9Ltkl7KEYFkmPogr2FCReSdQRqUXP5FXi1KfsQmOt6H3B2aIyHu/gqzdrmk8591VuRIk0v0M92fKkqT+x0+S6ps/D7J6uHTBGpiZLEXu/cd/fSHruaOy1uCKHdfjz4FIVUyvmHUUAZ6HJc1Uf9DAMU+RQ+K2s3Z+qdrB4BHW4qiNKhzruXcPgFfWcIdyUfoMraCGDYdcgfyLCu19Za8jTI52Fy5+rdmyJegzakkTcF4qigXujjzGZo6VAuKodlB/xoqeO3DjwWgkNVnxJUjZ0mOVdus0vvgs6B7bCccOG6CEu7fPqh3Ba2bl5yAryFtUvuXb+1Bjnb27PnYq6ow++hCEbGCltlIPM4kDjHA6Z8/ydOwylZKHVfTXMdAtJH0h+pLEtVRaYSSbXEGQJwjtCwRwYmPDyKCOmUaTAalBL5+0TYpXdSwp/MOCI9i2bF9beYB0+TvFVrj3x3z7bojEjK/JRfgR+kV2FwMl7mKqCaGkAbePJQE+jjj+6ktacPN7tcE49PLBYs7rW6ZPhCTSSFMbYVxQq/QO9VYyNOD23V9NagX6pArbd54PXBQNCkNUS8QKEzHIsrl2N30ku7Hj+AQzbNbJhzbsEymdOElDb/q1tY=
+  on:
+    repo: jokio/jokio-nextjs
