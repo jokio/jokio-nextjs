@@ -6,7 +6,16 @@
 nextjs middleware for jokio
 
 ## Example:
-/src/index.ts
+
+folder structure
+```
+|src
+|- index.ts
+|- pages
+|-- index.js
+```
+
+src/index.ts
 ```js
 import { run } from 'jokio'
 import { nextjs, express } from '../index';
@@ -17,15 +26,7 @@ run(
 )
 ```
 
-/src/pages/index.js
+src/pages/index.js
 ```js
 export default props => <div>Hello World</div>
-```
-
-folder structure
-```
-|src
-|- index.ts
-|- pages
-|-- index.js
 ```
