@@ -5,19 +5,22 @@ import { Context } from './context';
 export const express = (props: StartProps = null) => (state, context: Context) => {
 	const express = Express()
 
-	if (!express)
-		throw new Error('[context] express not found')
-
 	const defaultProps: StartProps = {
-		port: parseInt(process.env.PORT) || 3000
+		port: parseInt(process.env.PORT) || 3000,
+		autoStart: true,
 	}
 
 	const {
-		port
+		port,
+		autoStart,
 	} = merge(defaultProps, props);
 
 
 	context.express = express;
+
+	if (!autoStart) {
+		return state;
+	}
 
 	return new Promise(resolve => express.listen(port, () => {
 		console.log(`server started at: http://localhost:${port}`);
@@ -28,4 +31,5 @@ export const express = (props: StartProps = null) => (state, context: Context) =
 
 export interface StartProps {
 	port?: number
+	autoStart?: boolean
 }
