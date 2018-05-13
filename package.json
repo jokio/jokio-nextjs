@@ -1,8 +1,8 @@
 {
 	"name": "jokio-nextjs",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"author": "Jok Entertainers",
-	"description": "nextjs middleware for jokio",
+	"description": "next.js middleware for jokio",
 	"main": "dist/index.js",
 	"types": "dist/index.d.js",
 	"scripts": {
@@ -12,12 +12,12 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"express": "^4.16.2",
 		"jokio": "^0.2.1",
 		"lodash": "^4.17.4",
-		"next": "4.2.3",
-		"react": "16.2.0",
-		"react-dom": "16.2.0"
+		"next": "^6.0.1",
+		"react": "^16.3.2",
+		"react-dom": "^16.3.2",
+		"express": "^4.16.3"
 	},
 	"devDependencies": {
 		"@types/express": "^4.11.0",
